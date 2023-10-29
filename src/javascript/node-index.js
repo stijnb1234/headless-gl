@@ -47,7 +47,9 @@ function createContext (width, height, options) {
       contextAttributes.preserveDrawingBuffer,
       contextAttributes.preferLowPowerToHighPerformance,
       contextAttributes.failIfMajorPerformanceCaveat)
-  } catch (e) {}
+  } catch (e) {
+    console.error(e);
+  }
   if (!ctx) {
     return null
   }

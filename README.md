@@ -1,7 +1,6 @@
 # gl
 
-[![Travis CI](https://travis-ci.com/stackgl/headless-gl.svg?branch=master)](https://travis-ci.com/stackgl/headless-gl)
-[![Appveyor](https://ci.appveyor.com/api/projects/status/g5ypwyffmtg1iu83/branch/master?svg=true)](https://ci.appveyor.com/project/dhritzkiv/headless-gl)
+[![ci](https://github.com/stackgl/headless-gl/actions/workflows/ci.yml/badge.svg)](https://github.com/stackgl/headless-gl/actions/workflows/ci.yml)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 `gl` lets you create a WebGL context in [Node.js](https://nodejs.org/en/) without making a window or loading a full browser environment.
@@ -41,7 +40,7 @@ npm install gl
 
 And you are good to go!
 
-Prebuilt binaries are generally available for LTS node versions (e.g. 16, 18, 20). If your system is not supported, then please see the [development](#system-dependencies) section on how to configure your build environment.  Patches to improve support are always welcome!
+Prebuilt binaries are generally available for LTS node versions (e.g. 18, 20). If your system is not supported, then please see the [development](#system-dependencies) section on how to configure your build environment.  Patches to improve support are always welcome!
 
 ## Supported platforms and Node.js versions
 
@@ -131,12 +130,12 @@ In most cases installing `headless-gl` from npm should just work.  However, if y
 
 #### Mac OS X
 
-* [Python 2.7](https://www.python.org/)
+* [Python 3](https://www.python.org/)
 * [XCode](https://developer.apple.com/xcode/)
 
 #### Ubuntu/Debian
 
-* [Python 2.7](https://www.python.org/)
+* [Python 3](https://www.python.org/)
 * A GNU C++ environment (available via the `build-essential` package on `apt`)
 * [libxi-dev](http://www.x.org/wiki/)
 * Working and up to date OpenGL drivers
@@ -149,7 +148,7 @@ $ sudo apt-get install -y build-essential libxi-dev libglu1-mesa-dev libglew-dev
 
 #### Windows
 
-* [Python 2.7](https://www.python.org/)
+* [Python 3](https://www.python.org/)
 * [Microsoft Visual Studio](https://www.microsoft.com/en-us/download/details.aspx?id=5555)
 * d3dcompiler_47.dll should be in c:\windows\system32, but if isn't then you can find another copy in the deps/ folder
 
@@ -177,7 +176,7 @@ addons:
     - libglapi-mesa
     - libosmesa6
 node_js:
-  - '8'
+  - '20'
 before_script:
   - export DISPLAY=:99.0; sh -e /etc/init.d/xvfb start
 ```
